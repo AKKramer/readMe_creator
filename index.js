@@ -6,12 +6,12 @@ const writeFilePromisify = util.promisify(fs.writeFile)
 
 // array of questions for user
 const questions = [
-    {
-      type: "checkbox",
-      message: "What sections of the readme will you be populating",
-      choices: ['Title', 'Option 2', 'Option 3', 'Option 4'],
-      name: "choices"
-    },
+    // {
+    //   type: "checkbox",
+    //   message: "What sections of the readme will you be populating",
+    //   choices: ['Title', 'Option 2', 'Option 3', 'Option 4'],
+    //   name: "choices"
+    // },
   
     {
       type: "input",
@@ -47,7 +47,7 @@ const questions = [
       type: "list",
       message: "Choose a license for this project?",
       name: "license",
-      choices: ['Option 1', 'Option 2', 'Option 3', 'Option 4']
+      choices: ['MIT License', 'Apache License 2.0', 'Mozilla Public License (MPL) 1.1', 'Open Source']
     },
     {
       type: "input",
@@ -73,6 +73,7 @@ function init() {
 
   inquirer.prompt(questions)
     .then(answers => {
+      console.log(answers)
     writeFilePromisify("readMe.md", generate.generateMarkdown(answers));
   
 })

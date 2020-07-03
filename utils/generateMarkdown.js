@@ -6,34 +6,57 @@
 // https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
 
 function generateMarkdown(data) {
+  var license = ''
+  if(data.license === 'MIT License'){
+    license = 'https://raw.githubusercontent.com/legacy-icons/license-icons/master/dist/32x32/mit.png'
+  }
+  else if(data.license === 'Apache License 2.0'){
+    license = 'https://raw.githubusercontent.com/legacy-icons/license-icons/master/dist/32x32/apache.png'
+  }
+  else if(data.license === 'Mozilla Public License (MPL) 1.1'){
+    license = 'https://raw.githubusercontent.com/legacy-icons/license-icons/master/dist/32x32/mozilla.png'
+  }
+  else{
+    license = 'https://raw.githubusercontent.com/legacy-icons/license-icons/master/dist/32x32/open-source.png'
+  }
+
+
+
   return `
 
-# ${data.title}
+# Project title: ${data.title}
+
+![A test image](${license})
+
  
 ## Table of Contents
-2. [Description](#description)
-3. [Installation](#Installation_instructions)
-4. [Usage](#Usage_Instructions)
-5. [Contribution](#Contribution_notes)
-6. [License](#License_information)
-7. [Contact_information](#Contact_information)
+1. [Description](#description)
+2. [Installation](#Installation)
+3. [Usage](#Usage)
+4. [Contributing](#Contributing)
+5. [License](#License)
+5. [Tests](#Tests)
+6. [Questions](#Questions)
   
   ## Description 
   ${data.description}
 
-  ## Installation_instructions
+  ## Installation
   ${data.installation}
 
-  ## Usage_Instructions
+  ## Usage
   ${data.usage}
 
-  ## Contribution_notes
+  ## Contributing
   ${data.contribution}
 
-  ## License_information
+  ## License
   ${data.license}
 
-  ## Contact_information
+  ## Tests
+  ${data.test}
+
+  ## Questions
   <ul>
     <li>My GitHub username is: ${data.github}</li>
     <li>My email address is: ${data.email}</li>
