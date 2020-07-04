@@ -1,8 +1,8 @@
 
 
-# Project title: Super awesomeness
+# Project title: Awesomeness
 
-![A test image](https://raw.githubusercontent.com/legacy-icons/license-icons/master/dist/32x32/mozilla.png)
+![A test image](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
 
  
 ## Table of Contents
@@ -15,22 +15,34 @@
 6. [Questions](#Questions)
   
   ## Description 
-  Refere to the title
+  <ul>
+    <li>Please refer to the title</li>
+  </ul>
 
   ## Installation
-  Just keep clicking accept until you get a BSOD. Then reboot and your good. 
+  <ul>
+    <li>Keep clicking accept and okay until you get a BSOD. Don't panic, this is normal. After restart as long as your OS is still intact, it should be installed. </li>
+  </ul>
 
   ## Usage
-  Use all day and all night
+  <ul>
+    <li>Use all day and every day</li>
+  </ul>
 
   ## Contributing
-  I'd like to take this moment to thank my family and friends for all they have contributed to this project.
+  <ul>
+    <li>guidelines</li>
+  </ul>
 
   ## License
-  Mozilla Public License (MPL) 1.1
+  <ul>
+    <li>Mozilla Public License (MPL) 1.1</li>
+  </ul>
 
   ## Tests
-  Pre-tested and ready to rock
+  <ul>
+    <li>This program is pre tested and ready to rock</li>
+  </ul>
 
   ## Questions
   <ul>

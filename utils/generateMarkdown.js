@@ -1,23 +1,18 @@
 // function to generate markdown for README
 
-
-
-//  LOOK AT ME 
-// https://stackoverflow.com/questions/11948245/markdown-to-create-pages-and-table-of-contents
-
 function generateMarkdown(data) {
   var license = ''
   if(data.license === 'MIT License'){
-    license = 'https://raw.githubusercontent.com/legacy-icons/license-icons/master/dist/32x32/mit.png'
+    license = 'https://img.shields.io/badge/License-MIT-yellow.svg'
   }
   else if(data.license === 'Apache License 2.0'){
-    license = 'https://raw.githubusercontent.com/legacy-icons/license-icons/master/dist/32x32/apache.png'
+    license = 'https://img.shields.io/badge/License-Apache%202.0-blue.svg'
   }
   else if(data.license === 'Mozilla Public License (MPL) 1.1'){
-    license = 'https://raw.githubusercontent.com/legacy-icons/license-icons/master/dist/32x32/mozilla.png'
+    license = 'https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg'
   }
   else{
-    license = 'https://raw.githubusercontent.com/legacy-icons/license-icons/master/dist/32x32/open-source.png'
+    license = 'https://img.shields.io/badge/License-ODC_BY-brightgreen.svg'
   }
 
 
@@ -39,22 +34,34 @@ function generateMarkdown(data) {
 6. [Questions](#Questions)
   
   ## Description 
-  ${data.description}
+  <ul>
+    <li>${data.description}</li>
+  </ul>
 
   ## Installation
-  ${data.installation}
+  <ul>
+    <li>${data.installation}</li>
+  </ul>
 
   ## Usage
-  ${data.usage}
+  <ul>
+    <li>${data.usage}</li>
+  </ul>
 
   ## Contributing
-  ${data.contribution}
+  <ul>
+    <li>${data.contribution}</li>
+  </ul>
 
   ## License
-  ${data.license}
+  <ul>
+    <li>${data.license}</li>
+  </ul>
 
   ## Tests
-  ${data.test}
+  <ul>
+    <li>${data.test}</li>
+  </ul>
 
   ## Questions
   <ul>
